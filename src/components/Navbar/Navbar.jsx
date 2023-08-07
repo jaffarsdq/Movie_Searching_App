@@ -1,19 +1,20 @@
-
-function Navbar () {
-    return (
-        <>
-            <nav className="navbar bg-body-tertiary">
-                <div className="container-fluid">
-                    <a className="navbar-brand">Navbar</a>
-                    <form className="d-flex" role="search">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                    <button className="btn btn-primary p-2 m-2">Theme</button>
-                    </form>
-                </div>
-            </nav>
-        </>
-    )
+import React from 'react'
+import './navbar.css'
+const Navbar = () => {
+  return (
+    <nav className="nav">
+       <div className="nav-brand">
+        <div className="nav-title">Movie Quest</div>
+       </div>
+       <div className="nav-search">
+        <input className="search" type="search" name="search" id="search" placeholder='What movie are you thinking about...'/>
+        <button className="search-btn">Search</button>
+       </div>
+       <div className="nav-theme-btn">
+        <button className="theme-btn">Theme</button>
+       </div>
+    </nav>
+  )
 }
 
-export default Navbar;
+export default Navbar

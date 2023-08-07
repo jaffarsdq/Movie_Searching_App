@@ -1,0 +1,47 @@
+.movie-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.731);
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+    background-color: rgb(255 255 255 / 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.movie-wrapper:hover {
+    box-shadow: none;
+    color: black;
+    background-color: rgb(255 255 255 / 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-out ;
+}
+
+.movie-image {
+    width: fit-content;
+    height: fit-content;
+}
+
+.img {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.movie-title {
+    margin: 1rem;
+    font-size: large;
+    letter-spacing: 2px;
+    width: 300px;
+    height: fit-content;
+}
+
+.movie-year , .movie-type {
+    margin-top: 1rem;
+    font-size: larger;
+    width: 300px;
+    height: 20px;
+    margin: 1rem;
+}
