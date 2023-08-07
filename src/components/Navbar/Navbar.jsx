@@ -2,13 +2,18 @@ import React, { useState } from 'react'
 import './navbar.css'
 import useMovieList from '../../hooks/useMovieList';
 import useDebounce from '../../hooks/useDebounce';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
 
   const [isAutoCompleteVisible,setIsAutoCompleteVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const {movieList} = useMovieList(searchTerm);
+  const navigator = useNavigate();
 
+  function handleAutoCompleteClick(movieImdbId) {
+    navigator(`/movie/${movieImdbId}`)
+  }
 
   return (
     <nav className="nav">
@@ -26,7 +31,7 @@ function Navbar() {
           <div className="search-list" style={{display: (isAutoCompleteVisible) ? 'block' : 'none'}}>
           <div className='auto-complete'>Showing the results for auto complete...</div>
             {movieList.length > 0 && movieList.map(movie => 
-              <div key={movie.imdbID} className='auto-complete'>{movie.Title}</div>
+              <div onMouseDown={() => handleAutoCompleteClick(movie.imdbID)} key={movie.imdbID} className='auto-complete'>{movie.Title}</div>
             )}
           </div>
        </div>
