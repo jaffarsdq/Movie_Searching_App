@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { searchMovieById } from "../../components/apis/omdb";
 import MovieCard from '../../components/movieCard/MovieCard'
-// import { Rating } from '@smastrom/react-rating'
+import { Rating } from '@smastrom/react-rating'
 
 
 // CSS imports
 import './MovieDetails.css';
-// import '@smastrom/react-rating/style.css'
+import '@smastrom/react-rating/style.css'
 
 
 function MovieDetails() {
@@ -46,9 +46,9 @@ function MovieDetails() {
                         return <span className="genre" key={genre}>{genre}</span>
                     })}
                 </div>
-                {/* <div>
+                <div>
                     <Rating items={10} value={Math.floor(movie.imdbRating)} />
-                </div> */}
+                </div>
             </div>}
         </div>
     )

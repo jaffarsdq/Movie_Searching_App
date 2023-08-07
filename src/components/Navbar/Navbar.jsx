@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './navbar.css'
 import useMovieList from '../../hooks/useMovieList';
 import useDebounce from '../../hooks/useDebounce';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
 
@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <nav className="nav">
-       <div className="nav-brand">Movie Quest</div>
+       <Link to={'/'} className="nav-brand">Movie Quest</Link>
        <div className="nav-search">
           <input className="search" type="search" name="search" id="search" placeholder='What movie are you thinking about...'
             onFocus={() => {

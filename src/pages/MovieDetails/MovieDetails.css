@@ -19,8 +19,8 @@
 }
 
 .genre {
-    border: 1px solid var(--dull-blue);
-    background-color: var(--dull-blue);
+    border: 1px solid var(--navy);
+    background-color: var(--navy);
     border-radius: 20px;
     padding: 10px 20px;
     margin-right: 1rem;
