@@ -55,7 +55,8 @@
     color: black;
     width:50%;
     border-radius: 8px;
-
+    max-height: 200px;
+    overflow-y: scroll;
 }
 
 
@@ -66,7 +67,7 @@
 .auto-complete {
     padding: 0.5rem;
     border-top: 2px solid black;
-    font-size: medium ;
+    font-size: medium;
 }
 
 .auto-complete:hover {
