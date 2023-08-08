@@ -20,6 +20,16 @@ function Navbar() {
     navigator(`/movie/${movieImdbId}`)
   }
 
+  function updateTheme() {
+    if(theme == 'dark') {
+      setTheme('light');
+      localStorage.setItem('app-theme', 'light');
+    } else {
+      setTheme('dark');
+      localStorage.setItem('app-theme', 'dark');
+    }
+  }
+
   return (
     <nav className="nav" >
         <Link to={'/'} className="nav-brand">Movie Quest</Link>
@@ -49,7 +59,7 @@ function Navbar() {
                     )}
             </div>
         </div>
-        <div className="nav-theme-btn" onClick={() => setTheme((theme == 'dark') ? 'light' : 'dark')}>
+        <div className="nav-theme-btn" onClick={updateTheme}>
           <CircumIcon name={(theme == 'dark') ? 'light' : 'dark'}/>
         </div>
     </nav>

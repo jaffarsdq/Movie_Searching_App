@@ -1,5 +1,5 @@
 // CSS import
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 
 import ThemeContext from './context/ThemeContext'
@@ -9,6 +9,13 @@ import MainRoutes from './routes/Mainroutes'
 function App() {
 
   const [theme, setTheme] = useState('dark');
+
+  useEffect (() => {
+    const userTheme = localStorage.getItem('app-theme');
+    if(userTheme != null) {
+      setTheme(userTheme);
+    }
+  },[])
 
   return (
     <>
