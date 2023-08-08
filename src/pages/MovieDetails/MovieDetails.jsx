@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { searchMovieById } from "../../components/apis/omdb";
+import { searchMovieById } from "../../apis/omdb";
 import MovieCard from '../../components/movieCard/MovieCard'
 import { Rating } from '@smastrom/react-rating'
 
@@ -36,13 +36,13 @@ function MovieDetails() {
             }
             {movie && <div className="movie-details">
                 <div>
-                    Plot: {movie.Plot}
+                    <strong>Plot:</strong> {movie.Plot}
                 </div>
                 <div>
-                    Actors: {movie.Actors}
+                    <strong>Actors:</strong> {movie.Actors}
                 </div>
                 <div>
-                    Genre: {movie.Genre.split(',').map((genre) => {
+                    <strong>Genre:</strong> {movie.Genre.split(',').map((genre) => {
                         return <span className="genre" key={genre}>{genre}</span>
                     })}
                 </div>

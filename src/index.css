@@ -3,19 +3,20 @@ body {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background-color: rgba(5, 15, 35, 0.828);
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
+    height: 5px;
   }
   
   ::-webkit-scrollbar-track {
-    background-color: var(--grey-navy); /* Change this to the color you want for the scrollbar track */
+    background-color: inherit; /* Change this to the color you want for the scrollbar track */
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: var(--navy); /* Change this to the color you want for the scrollbar thumb */
+    background-color: var(--grey); /* Change this to the color you want for the scrollbar thumb */
+    border-radius: 20px;
   }
   
   /* Firefox */
@@ -24,14 +25,3 @@ body {
     scrollbar-color: #888 #f1f1f1;
   }
   
-  /* Internet Explorer and Microsoft Edge */
-  /* Please note that the '-ms-overflow-style' property is specific to IE and Edge */
-  .scrollable-content {
-    -ms-overflow-style: none; /* Hide the default scrollbar */
-    scrollbar-width: thin; /* Set the width of the scrollbar */
-  }
-  
-  /* Hide scrollbar arrows in IE and Edge */
-  .scrollable-content::-webkit-scrollbar-thumb {
-    display: none;
-  }

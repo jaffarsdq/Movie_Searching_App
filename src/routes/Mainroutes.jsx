@@ -1,5 +1,4 @@
-import {Routes, Route} from 
-'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Home from '../pages/Home/Home'
 import MovieDetails from '../pages/MovieDetails/MovieDetails'
 import Error from '../pages/Error/Error'
@@ -14,4 +13,4 @@ function MainRoutes() {
     )
 }
 
-export default MainRoutes
+export default MainRoutes;

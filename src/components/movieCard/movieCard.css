@@ -7,16 +7,17 @@
     align-items: center;
     text-align: center;
     margin-bottom: 3rem;
-    color: white;
+    color: var(--alternative-white);
     background-color: rgb(255 255 255 / 0.3);
 }
 
 .movie-wrapper:hover {
     box-shadow: none;
-    color: black;
+    color: var(--alternative-white);
     background-color: rgb(255 255 255 / 0.3);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease-out ;
+    cursor: pointer;
 }
 
 .movie-image {

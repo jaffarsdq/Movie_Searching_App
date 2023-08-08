@@ -10,7 +10,7 @@
 }
 
 .movie-details {
-    color: white;
+    color: var(--alternative-white);
     flex-basis: 50%;
     font-size: x-large;
     display: flex;
@@ -19,9 +19,10 @@
 }
 
 .genre {
-    border: 1px solid var(--navy);
-    background-color: var(--navy);
+    border: none;
+    background-color: var(--dark-blue);
     border-radius: 20px;
     padding: 10px 20px;
     margin-right: 1rem;
+    color: white;
 }
