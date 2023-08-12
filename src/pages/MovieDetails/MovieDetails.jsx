@@ -5,7 +5,6 @@ import { searchMovieById } from "../../apis/omdb";
 import MovieCard from '../../components/movieCard/MovieCard'
 import { Rating } from '@smastrom/react-rating'
 
-
 // CSS imports
 import './MovieDetails.css';
 import '@smastrom/react-rating/style.css'
@@ -22,6 +21,9 @@ function MovieDetails() {
 
     useEffect(() => {
         downloadMovie();
+        if(Math.random() < 0.5){
+            throw 'error';
+        } 
     }, [id]);
 
     return (

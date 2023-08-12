@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './MovieCard.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import ReactSvg from '../../assets/react.svg'
 function MovieCard({ Title, Year, Type, Poster,id }) {
     const navigator = useNavigate();
     function handleClick() {
@@ -9,7 +11,12 @@ function MovieCard({ Title, Year, Type, Poster,id }) {
     return (
         <div onClick={handleClick} className='movie-wrapper'>
             <div className='movie-image'>
-                <img className='img' src={Poster} />
+                <LazyLoadImage  
+                    key={Poster}
+                    className='img' 
+                    src={Poster} 
+                    placeholderSrc={ReactSvg}
+                />
             </div>
             <div className='movie-title'>
                 <span>{Title}</span>
