@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import './MovieCard.css';
+import './movieCard.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ReactSvg from '../../assets/react.svg'
 function MovieCard({ Title, Year, Type, Poster,id }) {
