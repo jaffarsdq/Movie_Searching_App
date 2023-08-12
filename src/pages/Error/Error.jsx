@@ -1,7 +1,7 @@
 function Error() {
     return (
         <>
-            <h1>error,,,not found</h1>
+            <h1>error...not found</h1>
         </>
     )
 }
