@@ -35,13 +35,13 @@ function MovieDetails() {
             }
             {movie && <div className="movie-details">
                 <div>
-                    <strong>Plot:</strong> {movie.Plot}
+                    <strong className="movie-details-key">Plot:</strong> {movie.Plot}
                 </div>
                 <div>
-                    <strong>Actors:</strong> {movie.Actors}
+                    <strong className="movie-details-key">Actors:</strong> {movie.Actors}
                 </div>
                 <div className="genre-wrapper">
-                    <strong>Genre:</strong> {movie.Genre.split(',').map((genre) => {
+                    <strong className="movie-details-key">Genre:</strong> {movie.Genre.split(',').map((genre) => {
                         return <span className="genre" key={genre}>{genre}</span>
                     })}
                 </div>

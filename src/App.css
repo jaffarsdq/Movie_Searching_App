@@ -1,4 +1,4 @@
-:root {
+[data-theme='dark'] {
     /* dark theme */
     --dark-blue : rgb(5, 15, 34); 
     --grey-blue : rgb(29, 37, 52);
@@ -7,6 +7,8 @@
     --alternative-white : white;
     --alternative-black : black;
     --search-hover : rgb(51, 65, 90);
+    --key-blue : #64a8ed;
+    transition: all 1000ms ease;
 }
 
 [data-theme='light'] {
@@ -18,6 +20,8 @@
     --alternative-white : rgb(0, 0, 0);
     --alternative-black : rgb(255, 255, 255);
     --search-hover : #f0f8ff;
+    --key-blue : #1363ed;
+    transition: all 1000ms ease;
 }
 
 #app-wrapper {
