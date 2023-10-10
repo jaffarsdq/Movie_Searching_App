@@ -33,34 +33,36 @@ function Navbar() {
   return (
     <nav className="nav" >
         <Link to={'/'} className="nav-brand">Movie Quest</Link>
-        <div className="nav-search">
-            <input className="search" 
-                    type="search" 
-                    name="search" 
-                    id="search" 
-                    placeholder='What movie are you thinking about...'
-                    onFocus={() => {
-                      setIsAutoCompleteVisible(true);
-                    }}
-                    onBlur={() => setIsAutoCompleteVisible(false)}
-                  onChange={useDebounce((e) => {
-                    setSearchTerm(e.target.value);
-                  })}
-            />
-            <div className="search-list" 
-                style={{display: (isAutoCompleteVisible) ? 'block' : 'none'}}>
-                <div className='auto-complete'>
-                  Showing the results for auto complete...
-                </div>
-                    {movieList.length > 0 && movieList.map(movie => 
-                        <div 
-                          onMouseDown={() => handleAutoCompleteClick(movie.imdbID)} key={movie.imdbID} className='auto-complete'>{movie.Title}
-                        </div>
-                    )}
-            </div>
-        </div>
-        <div className="nav-theme-btn" onClick={updateTheme}>
-          <CircumIcon name={(theme == 'dark') ? 'light' : 'dark'}/>
+        <div className="search_theme_wrapper">
+          <div className="nav-search">
+              <input className="search" 
+                      type="search" 
+                      name="search" 
+                      id="search" 
+                      placeholder='What movie are you thinking about...'
+                      onFocus={() => {
+                        setIsAutoCompleteVisible(true);
+                      }}
+                      onBlur={() => setIsAutoCompleteVisible(false)}
+                      onChange={useDebounce((e) => {
+                        setSearchTerm(e.target.value);
+                      })}
+              />
+              <div className="search-list" 
+                  style={{display: (isAutoCompleteVisible) ? 'block' : 'none'}}>
+                  <div className='auto-complete'>
+                    Showing the results for auto complete...
+                  </div>
+                      {movieList.length > 0 && movieList.map(movie => 
+                          <div 
+                            onMouseDown={() => handleAutoCompleteClick(movie.imdbID)} key={movie.imdbID} className='auto-complete'>{movie.Title}
+                          </div>
+                      )}
+              </div>
+          </div>
+          <div className="nav-theme-btn" onClick={updateTheme}>
+            <CircumIcon name={(theme == 'dark') ? 'light' : 'dark'}/>
+          </div>
         </div>
     </nav>
   )
